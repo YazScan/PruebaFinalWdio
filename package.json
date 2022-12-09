@@ -1,0 +1,36 @@
+{
+  "name": "pruebafinalwdio",
+  "version": "1.0.0",
+  "description": "\"Prueba final curso WebdriverIO Abstracta\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio ./wdio.conf.js",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YazScan/PruebaFinalWdio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YazScan/PruebaFinalWdio/issues"
+  },
+  "homepage": "https://github.com/YazScan/PruebaFinalWdio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "@wdio/allure-reporter": "^8.0.8",
+    "@wdio/local-runner": "^8.0.9",
+    "@wdio/mocha-framework": "^8.0.9",
+    "@wdio/selenium-standalone-service": "^8.0.9",
+    "@wdio/spec-reporter": "^8.0.8",
+    "chai": "^4.3.7",
+    "chai-webdriverio": "^1.0.0",
+    "webdriverio": "^8.0.9"
+  },
+  "dependencies": {
+    "@wdio/cli": "^8.0.9"
+  }
+}
