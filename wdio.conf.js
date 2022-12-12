@@ -1,3 +1,14 @@
+var path = require('path');
+const ambientes = require('./datos/ambientes.js')
+//obtener el ambiente seleccionado
+let AMBIENTE = process.env.AMBIENTE
+
+if (!AMBIENTE || !['testing', 'prod'].includes(AMBIENTE)) {
+   //si no se selecciona ningún ambiente se utiliza el ambiente de testing por defecto
+   console.log('Ejecutando testing por default')
+   AMBIENTE = 'testing'
+}
+
 export const config = {
     //
     // ====================
@@ -102,7 +113,8 @@ export const config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://opencart.abstracta.us/',
+    baseUrl: ambientes[AMBIENTE],
+
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -118,7 +130,22 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone'],
+    services:[
+        [
+          'image-comparison',
+          {
+            baselineFolder: path.join(process.cwd(), './visual-regression/baseline/'),
+            formatImageName: '{tag}-{logName}-{width}x{height}',
+            screenshotPath: path.join(process.cwd(), './visual-regression/'),
+            savePerInstance: true,
+            autoSaveBaseline: true,
+            blockOutStatusBar: true,
+            blockOutToolBar: true,
+            // más opciones...
+          },
+        ],
+        'selenium-standalone',
+      ],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
