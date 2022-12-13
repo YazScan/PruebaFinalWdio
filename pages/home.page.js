@@ -4,7 +4,7 @@ class HomePage extends BasePage {
 
    //WebElements
    get barraDeBusqueda(){ return $('[name="search"]') }
-
+   get currency(){ return $('.btn-group').$('.btn-link')}
 
    //-------------------------------------------------------------------------------------------------------//
 
