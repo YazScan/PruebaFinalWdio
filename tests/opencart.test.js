@@ -6,7 +6,11 @@ describe('Cambiar la moneda', function () {
 
   it('Deberia cambiar la moneda a Euro', async ()=>{
     await homePage.abrir('/');
-    await currency.click();
+    await homePage.currency.click();
+    await homePage.currencyDropDown.click();
+    //let information= await $('=site')
+    //await information.scrollIntoView();
+    await browser.pause(5000);
   });
    
 });
