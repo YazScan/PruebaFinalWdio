@@ -1,18 +1,18 @@
 import homePage from '../pages/home.page';
 import busquedaPage from '../pages/busqueda.page';
 import DATOS from '../datos/articulos';
-
+ 
  describe('Búsqueda', function () {
-  
-  //  DATOS.forEach(({articulo}) => {
-  //    it(`Debería buscar ${articulo}`, async ()=> {
-  //      await homePage.abrir('/');
-  //      await homePage.buscar(articulo);
-  //      await expect(await homePage.obtenerTextoBusqueda()).to.equal(articulo);
-  //      await expect(await busquedaPage.obtenerNombreResultado()).to.equal(articulo);
-  //    });
-  //  });
-
+ 
+   DATOS.forEach(({articulo}) => {
+     it(`Debería buscar ${articulo}`, async ()=> {
+       await homePage.abrir('/');
+       await homePage.buscar(articulo);
+       await expect(await homePage.obtenerTextoBusqueda()).to.equal(articulo);
+       await expect(await busquedaPage.obtenerNombreResultado()).to.equal(articulo);
+     });
+   });
+ 
   it('Comparación de imágenes con página de WebdriverIO', async () => {
     await browser.url('https://webdriver.io');
     await $(".navbar--fixed-top").waitForDisplayed();
@@ -23,7 +23,5 @@ import DATOS from '../datos/articulos';
         "Error: la barra de navegación de WebdriverIO no coincide con la original"
     ).equal(0);
   });
-  
- });
-
  
+ });
