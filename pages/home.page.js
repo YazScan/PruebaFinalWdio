@@ -3,10 +3,11 @@ import BasePage from '../pages/base.page';
 class HomePage extends BasePage {
 
    //WebElements
-   get barraDeBusqueda(){ return $('[name="search"]') }
-   get currency(){ return $('.btn-group').$('.btn-link')}
+   get barraDeBusqueda(){ return $('[name="search"]') };
+   get currency(){ return $('.btn-group').$('.btn-link')};
    get currencyDropDown(){return $('.open').$('ul.dropdown-menu').$('li:nth-child(1)')};
-
+   get laptopsAndNotebooks (){return $('*=Laptops')};
+   get showAllLaptopsAndNotebooks (){return $('*=Show All Laptops')};
    //-------------------------------------------------------------------------------------------------------//
 
    /**
