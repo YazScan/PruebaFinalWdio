@@ -10,7 +10,6 @@ describe('Cambiar la moneda', function () {
     await homePage.currencyDropDown.click();
     //let information= await $('=site')
     //await information.scrollIntoView();
-    await browser.pause(5000);
   });
    
 });
