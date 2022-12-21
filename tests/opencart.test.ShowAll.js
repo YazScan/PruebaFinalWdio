@@ -8,7 +8,7 @@ describe('Show all laptops & notbooks', function () {
     await homePage.abrir('/');
     await homePage.laptopsAndNotebooks.click();
     await homePage.showAllLaptopsAndNotebooks.click();
-    await assert.equal(await $('h2').getValue(),'Laptops & Notebooks','Error: No se accedio a la pantalla de Laptops & notebooks');
+    await assert.equal(await $('h2').getText(),'Laptops & Notebooks','Error: No se accedio a la pantalla de Laptops & notebooks');
     await browser.pause(5000);
 
   });
