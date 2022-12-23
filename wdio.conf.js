@@ -1,5 +1,5 @@
 var path = require('path');
-const ambientes = require('./datos/ambientes.js')
+const ambientes = require('./data/ambientes.js')
 //obtener el ambiente seleccionado
 let AMBIENTE = process.env.AMBIENTE
 

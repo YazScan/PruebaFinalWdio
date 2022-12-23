@@ -4,9 +4,9 @@ class HomePage extends BasePage {
 
       //WebElements
 
-    get emailForm(){ return $('#input-email'); }
-    get passwordForm() { return $('#input-password'); }
-    get signInBtn(){ return $('#submit'); }
+    get emailForm(){ return $('#input-email'); };
+    get passwordForm() { return $('#input-password'); };
+    get signInBtn(){ return $('#submit'); };
     get pageHeading() { return $('#content').$(':nth-child(1)')}; 
 
 

@@ -3,7 +3,7 @@ import BasePage from '../pages/base.page';
 class HomePage extends BasePage {
 
    //WebElements
-   get barraDeBusqueda(){ return $('[name="search"]') };
+   get searchBar(){ return $('[name="search"]') };
 
    get currency(){ return $('.btn-group').$('.btn-link')};
 
@@ -21,20 +21,20 @@ class HomePage extends BasePage {
 
    /**
     * Escribe el artículo en el campo de búsqueda y presiona Enter
-    * @param {String} articulo que se buscará
+    * @param {String} article que se buscará
     */
-   async buscar(articulo) {
-        addStep(`Buscar artículo: ${articulo}`);
-       await super.vaciarCampoYEnviarTexto(await this.barraDeBusqueda, articulo);
+   async search(article) {
+        addStep(`Search article: ${article}`);
+       await super.emptyFieldAndSendText(await this.searchBar, article);
        await this.barraDeBusqueda.keys('Enter');
    }
 
    /**
     * Obtener texto de la barra de búsqueda
     */
-   async obtenerTextoBusqueda() {
-      addStep('Obtener texto de la barra de búsqueda');
-       return await this.barraDeBusqueda.getValue();
+   async getSearchText() {
+      addStep('Get text from the search bar');
+       return await this.searchBar.getValue();
    }
 
 

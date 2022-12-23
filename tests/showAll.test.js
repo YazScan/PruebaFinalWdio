@@ -1,8 +1,8 @@
 // import homePage from '../pages/home.page';
-// import busquedaPage from '../pages/busqueda.page';
+// import searchPage from '../pages/search.page';
 // import DATOS from '../datos/articulos';
 
-// describe('Show all laptops & notbooks', function () {
+// describe('Show all laptops & notbooks', () => {
 
 //   it('Deberia abrir la pantalla laptops & notebooks', async ()=>{
 //     await homePage.abrir('/');
