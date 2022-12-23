@@ -1,6 +1,6 @@
 import BasePage from './base.page';
 
-class BusquedaPage extends BasePage {
+class searchPage extends BasePage {
 
    //Elementos Web
    get resultado(){ return $('h4') }
@@ -23,4 +23,4 @@ class BusquedaPage extends BasePage {
 
 }
 
-export default new BusquedaPage();
+export default new searchPage();

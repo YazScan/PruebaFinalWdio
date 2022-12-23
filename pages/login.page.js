@@ -1,6 +1,6 @@
 import BasePage from '../pages/base.page';
 
-class HomePage extends BasePage {
+class loginPage extends BasePage {
 
       //WebElements
 
@@ -26,7 +26,5 @@ async loginForm(email,password) {
 }
 
 
-
-
 }
-export default new HomePage();
+export default new loginPage();
