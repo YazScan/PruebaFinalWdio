@@ -3,15 +3,22 @@ import BasePage from '../pages/base.page';
 class HomePage extends BasePage {
 
    //WebElements
-   get searchBar(){ return $('[name="search"]') };
-   get currency(){ return $('.btn-group').$('.btn-link')};
-   get currencyDropDown(){return $('.open').$('ul.dropdown-menu').$('li:nth-child(3)')};
-   get laptopsAndNotebooks (){return $('*=Laptops')};
-   get showAllLaptopsAndNotebooks (){return $('*=Show All Laptops')};
+
+   //Used in Login 
    get myAccount(){ return $('.fa-user'); };
    get login(){return $('.dropdown-menu-right').$('li:nth-child(2)')};
+
+   //Used in ChangeCurrency 
    get pageHeading(){ return $('h1'); };
+   get currency(){ return $('.btn-group').$('.btn-link')};
+   get currencyDropDown(){return $('.open').$('ul.dropdown-menu').$('li:nth-child(3)')};
    get currencyElement() {return $('strong');};
+
+   //Used in ShowAll
+   get laptopsAndNotebooks (){return $('*=Laptops')};
+   get showAllLaptopsAndNotebooks (){return $('*=Show All Laptops')};
+
+   get searchBar(){ return $('[name="search"]') };
 
    //-------------------------------------------------------------------------------------------------------//
 
