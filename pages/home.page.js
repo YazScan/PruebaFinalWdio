@@ -19,6 +19,8 @@ class HomePage extends BasePage {
 
    get pageHeading(){ return $('h1'); };
 
+   get currencyElement() {return $('strong');};
+
 
 
    //-------------------------------------------------------------------------------------------------------//

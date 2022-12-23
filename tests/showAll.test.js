@@ -1,16 +1,19 @@
+// import categoryPage from '../pages/category.page';
 // import homePage from '../pages/home.page';
-// import searchPage from '../pages/search.page';
-// import DATOS from '../datos/articulos';
 
 // describe('Show all laptops & notbooks', () => {
 
-//   it('Deberia abrir la pantalla laptops & notebooks', async ()=>{
-//     await homePage.abrir('/');
+//   it('[CP-Categories-01] Should open the page of laptops & notebooks', async ()=>{
+//     addStep('Open the web');
+//     await homePage.open('/');
+//     addStep('Checks that the page has been opened correctly');
+//     assert.equal(await homePage.pageHeading.getText(),'Your Store','Error:the page did not initialize well');
+//     addStep('Clicks on laptops & notebooks in the navbar')
 //     await homePage.laptopsAndNotebooks.click();
+//     addStep('Clicks on show all')
 //     await homePage.showAllLaptopsAndNotebooks.click();
-//     await assert.equal(await $('h2').getText(),'Laptops & Notebooks','Error: No se accedio a la pantalla de Laptops & notebooks');
-//     await browser.pause(5000);
-
+//     addStep('Checks that the category page has been opened correctly');
+//     assert.equal(await categoryPage.categoryPageHeading.getText(),'Laptops & Notebooks','Error: Could not enter the section Laptops & Notebooks');
 //   });
    
 // });
