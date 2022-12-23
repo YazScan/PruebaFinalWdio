@@ -4,24 +4,14 @@ class HomePage extends BasePage {
 
    //WebElements
    get searchBar(){ return $('[name="search"]') };
-
    get currency(){ return $('.btn-group').$('.btn-link')};
-
    get currencyDropDown(){return $('.open').$('ul.dropdown-menu').$('li:nth-child(3)')};
-
    get laptopsAndNotebooks (){return $('*=Laptops')};
-
    get showAllLaptopsAndNotebooks (){return $('*=Show All Laptops')};
-
    get myAccount(){ return $('.fa-user'); };
-
    get login(){return $('.dropdown-menu-right').$('li:nth-child(2)')};
-
    get pageHeading(){ return $('h1'); };
-
    get currencyElement() {return $('strong');};
-
-
 
    //-------------------------------------------------------------------------------------------------------//
 
