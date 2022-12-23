@@ -13,9 +13,13 @@ class HomePage extends BasePage {
 
    get showAllLaptopsAndNotebooks (){return $('*=Show All Laptops')};
 
-   get myAccount(){ return $('.fa-user'); }
+   get myAccount(){ return $('.fa-user'); };
 
    get login(){return $('.dropdown-menu-right').$('li:nth-child(2)')};
+
+   get pageHeading(){ return $('h1'); };
+
+
 
    //-------------------------------------------------------------------------------------------------------//
 
