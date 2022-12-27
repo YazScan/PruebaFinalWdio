@@ -20,11 +20,6 @@ describe('Show all products in a category', () => {
     await categoryPage.mainPageBtn.click();
     addStep('Checks that it is back to the main page');
     assert.equal(await homePage.pageHeading.getText(),'Your Store','Error: the test did not go back to the main page');
-
-  
-   
-    await browser.pause(5000);
-
   });
    
 });
