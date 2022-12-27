@@ -14,26 +14,30 @@ class HomePage extends BasePage {
    get currency(){ return $('#form-currency')};
    get currencyDropDown(){return $('//button[contains(text(),"$ US Dollar")]')};
    get currencyElement() {return $('strong');};
-   
+
    get searchBar(){ return $('[name="search"]') };
 
    //-------------------------------------------------------------------------------------------------------//
    /**
-    * Clickea sobre la categoría correspondiente en la navbar y luego ingresa a show all
+    
+    * Clickea sobre la categoría correspondiente en la navbar
     * @param {String} category a la que ingresara
     */
+      async clickOnCategory(category) {
+         addStep(`Clicks in ${category}`);
+         const categoryName = $(`//a[(text()="${category}"]`);
+         categoryName.Click();
+      }
 
-   async ShowsAllProducts(category) {
-
-      addStep(`Clicks in ${category}`);
-       const categoryName = $(`//a[contains(text(),"${category}")]`);
-       categoryName.Click();
-
+   /**
+    * Clickea sobre show all de una categoria
+    * @param {String} category 
+    */
+      async showAll(category) {
       addStep(`Clicks in show all ${category}`);
-       const showAll = await $(`//a[contains(text(), "Show All ${category}")]`);
-       showAll.click();
-   }
-   
+         const showAll = await $(`//a[(text()="Show All ${category}"]`);
+         showAll.click();
+      }
 
    /**
     * Escribe el artículo en el campo de búsqueda y presiona Enter
