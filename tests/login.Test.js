@@ -2,24 +2,26 @@ import homePage from '../pages/home.page';
 import loginPage from '../pages/login.page';
 import { DATA } from '../data/loginData.json';
 
-const usuarioUno = DATA.usuarioUno;
-const accountTxt = 'My account';
+const userOne = DATA.userOne;
 
 describe('Login Credenciales Validas',  () => {
 
-    it('Deberia loguearse cuando coloca credenciales validas', async ()=>{
-        await homePage.abrir('/');
-        addStep('Clickea el dropdown My Account');
+    it('[CP-Login-01] Should login with the credentials in loginData.json', async ()=>{
+
+        addStep('Open the web');
+        await homePage.open('/');
+        addStep('Checks that the page has been opened correctly');
+        assert.equal(await homePage.pageHeading.getText(),'Your Store','Error:the page did not initialize well');
+        addStep('Clicks on dropdown "My Account"');
         await homePage.myAccount.click();
-        addStep('Clickea login');
+        addStep('Clicks login');
         await homePage.login.click();
-        addStep('Scrollea hasta form email')
+        addStep('Scrolls until email form')
         await loginPage.emailForm.scrollIntoView();
-        addStep('Ingresa las credenciales validas en el form y pulsa login');
-        await loginPage.loginForm(usuarioUno.email,usuarioUno.password);
-        addStep('Comprueba que se encuentra en la pantalla principal');
-        expect(await loginPage.pageHeading.getText()).to.be.equal(accountTxt);
-        await browser.pause(5000);
+        addStep('Fills the form and press login');
+        await loginPage.loginForm(userOne.email,userOne.password);
+        addStep('Checks that it has entered the page')
+        assert.equal(await loginPage.pageHeading.getText(),'My Account','Error: Could not enter the page');
     });
      
   });

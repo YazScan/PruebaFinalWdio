@@ -1,6 +1,6 @@
 { 
     "DATA": {
-        "usuarioUno": {
+        "userOne": {
             "email": "JohnS@gmail.com",
             "password": "js1234"
         }

@@ -5,8 +5,9 @@ class loginPage extends BasePage {
       //WebElements
     get emailForm(){ return $('#input-email'); };
     get passwordForm() { return $('#input-password'); };
-    get signInBtn(){ return $('#submit'); };
-    get pageHeading() { return $('#content').$(':nth-child(1)')}; 
+    get signInBtn(){ return $('input[type="submit"]'); };
+
+    get pageHeading() { return $('//h2[contains(text(),"Account")]')}; 
 
 /**
    * Completa el formulario de login.
@@ -17,7 +18,7 @@ class loginPage extends BasePage {
 async loginForm(email,password) {
     await this.emailForm.setValue(email);
     await this.passwordForm.setValue(password);
-    await super.clickElement(await this.signInBtn);
+    await this.signInBtn.click()
 }
 
 }
