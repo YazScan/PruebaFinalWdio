@@ -25,7 +25,7 @@ class HomePage extends BasePage {
     */
       async clickOnCategory(category) {
          addStep(`Clicks in ${category}`);
-         const categoryName = $(`//a[(text()="${category}"]`);
+         const categoryName = $(`//a[text()="${category}"]`);
          categoryName.Click();
       }
 
@@ -35,7 +35,7 @@ class HomePage extends BasePage {
     */
       async showAll(category) {
       addStep(`Clicks in show all ${category}`);
-         const showAll = await $(`//a[(text()="Show All ${category}"]`);
+         const showAll = await $(`//a[text()=" Show All ${category}"]`);
          showAll.click();
       }
 

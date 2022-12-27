@@ -13,8 +13,9 @@ describe('Show all products in a category', () => {
 
     addStep('Clicks on category')
     await homePage.clickOnCategory(category);
-    addStep('Clicks on show all')
-    await homePage.showAll(category);
+   // addStep('Clicks on show all')
+   // await homePage.showAll(category);
+
     //addStep('Checks that the category page has been opened correctly');
     //assert.equal(await categoryPage.categoryPageHeading.getText(), category,'Error: Could not enter the section Laptops & Notebooks');
     await browser.pause(5000);
