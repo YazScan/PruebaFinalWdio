@@ -7,7 +7,7 @@ class loginPage extends BasePage {
     get passwordForm() { return $('#input-password'); };
     get signInBtn(){ return $('input[type="submit"]'); };
 
-    get pageHeading() { return $('//h2[contains(text(),"Account")]')}; 
+    get pageHeading() { return $('//h2[contains(text(),"Account")]');}; 
 
 /**
    * Completa el formulario de login.

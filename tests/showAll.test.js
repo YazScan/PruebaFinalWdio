@@ -10,14 +10,19 @@ describe('Show all products in a category', () => {
     await homePage.open('/');
     addStep('Checks that the page has been opened correctly');
     assert.equal(await homePage.pageHeading.getText(),'Your Store','Error:the page did not initialize well');
-
     addStep('Clicks on category')
     await homePage.clickOnCategory(category);
-   // addStep('Clicks on show all')
-   // await homePage.showAll(category);
+    addStep('Clicks on show all')
+    await homePage.showAll(category);
+    addStep('Checks that the category page has been opened correctly');
+    assert.equal(await categoryPage.categoryPageHeading.getText(),category,'Error: Could not enter the section Laptops & Notebooks');
+    addStep('Goes back to the main page')
+    await categoryPage.mainPageBtn.click();
+    addStep('Checks that it is back to the main page');
+    assert.equal(await homePage.pageHeading.getText(),'Your Store','Error: the test did not go back to the main page');
 
-    //addStep('Checks that the category page has been opened correctly');
-    //assert.equal(await categoryPage.categoryPageHeading.getText(), category,'Error: Could not enter the section Laptops & Notebooks');
+  
+   
     await browser.pause(5000);
 
   });
