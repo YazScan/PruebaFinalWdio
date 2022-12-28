@@ -1,18 +1,23 @@
 // import homePage from '../pages/home.page';
 
- 
+// let currency= '£'
 // describe('Change currency',  () => {
 
-//   it('[CP-Currency-01] Should change currency to US Dollar', async ()=>{
+//   it('[CP-Currency-01] Should change currency to the one selected', async ()=>{
 //     addStep('Open the web');
 //     await homePage.open('/');
 //     addStep('Checks that the page has been opened correctly');
 //     assert.equal(await homePage.pageHeading.getText(),'Your Store','Error:the page did not initialize well');
 //     addStep('Selects currency dropdown');
 //     await homePage.currency.click();
-//     await homePage.currencyDropDown.click();
-//     addStep('Changes currency to $ US Dollar');
-//     assert.equal(await homePage.currencyElement.getText(),'$','Error: The currency is not what it should');
-//   });
+//     addStep('Selects the currency choosen');
+//     await homePage.currencySelector(currency);
+//     addStep('Checks that the currency has changed');
+//     assert.equal(await homePage.currencyElement.getText(),currency,'Error: The currency is not what it should');
+//     //addStep('leaves the web page in its initial currency');
+//     //await homePage.currencySelector('$') ;
+//     //addStep('Checks the final currency');
+//     //assert.equal(await homePage.currencyElement.getText(),'$','Error: The test did not end on the correct currency');
+// });
 // });
 

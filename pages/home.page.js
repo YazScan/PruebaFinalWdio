@@ -4,22 +4,38 @@ class HomePage extends BasePage {
 
    //WebElements
 
-   //Used in Login 
    get myAccount(){ return $('.fa-user'); };
-   get login(){return $('//a[text()="Login"]')};
 
+   get loginBtn(){return $('//a[text()="Login"]')};
 
-   //Used in ChangeCurrency 
+   get logoutBtn() {return $('//a[text()="Logout"]')}
+
+   get logguedOutMsg() {return $('//p[contains(text(),"You have been logged off your account")]')}
+
    get pageHeading(){ return $('h1'); };
+
    get currency(){ return $('#form-currency')};
-   get currencyDropDown(){return $('//button[contains(text(),"$ US Dollar")]')};
+
    get currencyElement() {return $('strong');};
 
    get searchBar(){ return $('[name="search"]') };
 
+   get logoutBtn() {return $('//a[text()="Logout"]')}
+
+
    //-------------------------------------------------------------------------------------------------------//
    /**
-    
+    *
+     * Clickea sobre la moneda elegida 
+    * @param {String} currency
+    */
+      async currencySelector(currency) {
+      addStep(`Selects ${currency}`);
+      const currencyDropdown = $(`//button[contains(text(),"${currency}")]`);
+      await currencyDropdown.click();
+   };
+
+    /**
     * Clickea sobre la categoría correspondiente en la navbar
     * @param {String} category a la que ingresara
     */
