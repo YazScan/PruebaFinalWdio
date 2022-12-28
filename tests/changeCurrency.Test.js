@@ -14,6 +14,8 @@ describe('Change currency',  () => {
     await homePage.currencySelector(currency);
     addStep('Checks that the currency has changed');
     assert.equal(await homePage.currencyElement.getText(),currency,'Error: The currency is not what it should');
+    addStep('Selects currency dropdown');
+    await homePage.currency.click();
     addStep('leaves the web page in its initial currency');
     await homePage.currencySelector('$') ;
     addStep('Checks the final currency');
