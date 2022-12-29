@@ -1,7 +1,7 @@
 import categoryPage from '../pages/category.page';
 import homePage from '../pages/home.page';
 
-let category= "Laptops & Notebooks"
+const category= "Laptops & Notebooks"
 
 describe('Show all products in a category', () => {
 

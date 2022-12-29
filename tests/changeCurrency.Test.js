@@ -17,9 +17,10 @@ describe('Change currency',  () => {
     addStep('Selects currency dropdown');
     await homePage.currency.click();
     addStep('leaves the web page in its initial currency');
-    await homePage.currencySelector('$') ;
+    let currency = '$'
+    await homePage.currencySelector(currency) ;
     addStep('Checks the final currency');
-    assert.equal(await homePage.currencyElement.getText(),'$','Error: The test did not end on the correct currency');
+    assert.equal(await homePage.currencyElement.getText(),currency,'Error: The test did not end on the correct currency');
 });
 });
 
