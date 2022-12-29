@@ -1,13 +1,13 @@
 import homePage from '../pages/home.page';
 
 let currency= '£'
-describe('Change currency',  () => {
 
-  it('[CP-Currency-01] Should change currency to the one selected', async ()=>{
-    addStep('Open the web');
+describe('Change currency',  () => {
+  before('Open main page', async () => {
     await homePage.open('/');
-    addStep('Checks that the page has been opened correctly');
     assert.equal(await homePage.pageHeading.getText(),'Your Store','Error:the page did not initialize well');
+  });
+  it('[CP-Currency-01] Should change currency to the one selected', async ()=>{
     addStep('Selects currency dropdown');
     await homePage.currency.click();
     addStep('Selects the currency choosen');
