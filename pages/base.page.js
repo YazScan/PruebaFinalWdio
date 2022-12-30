@@ -8,7 +8,6 @@ export default class BasePage {
     * @param {String} route a la cual acceder
     */
    async open(route) {
-    addStep('Open url');
        await browser.url(`${route}`);
    }
 
