@@ -2,23 +2,23 @@ import BasePage from './base.page';
 
 class searchPage extends BasePage {
 
-   //Elementos Web
-   get resultado(){ return $('h4') }
+   //Web elements
+   get result(){ return $('h4') }
 
    //-------------------------------------------------------------------------------------------------------//
  
    /**
-    * Click en el resultado de la búsqueda
+    * Clicks on the result
     */
-   async ingresarAlResultado() {
-       await super.clickearElemento(this.resultado);
+   async clickResult() {
+       await super.clickearElemento(this.result);
    }
 
    /**
-    * Obtener texto del resultado de la búsqueda
+    * Get result text
     */
-   async obtenerNombreResultado() {
-       return await this.resultado.getText();
+   async resultName() {
+       return await this.result.getText();
    }
 
 }

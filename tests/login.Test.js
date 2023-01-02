@@ -1,17 +1,17 @@
 // import homePage from '../pages/home.page';
 // import loginPage from '../pages/login.page';
 // import { DATA } from '../data/loginData.json';
+// import {assert} from 'chai';
+
 
 // const userOne = DATA.userOne;
 
 // describe('Login test',  () => {
-
-//     it('[CP-Login-01] Should login with the credentials in loginData.json', async ()=>{
-
-//         addStep('Open the web');
+//     before('Open main page', async () => {
 //         await homePage.open('/');
-//         addStep('Checks that the page has been opened correctly');
 //         assert.equal(await homePage.pageHeading.getText(),'Your Store','Error:the page did not initialize well');
+//     });
+//     it('[CP-Login-01] Should login with the credentials in loginData.json', async ()=>{
 //         addStep('Clicks on dropdown "My Account"');
 //         await homePage.myAccount.click();
 //         addStep('Clicks login');
