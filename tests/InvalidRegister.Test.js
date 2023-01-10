@@ -3,7 +3,7 @@ import registerPage from '../pages/register.page';
 import { DATA } from '../data/loginData.json';
 import {assert} from 'chai';
 
-const registerData = DATA.registerData; 
+const registerData = DATA.registerData; //It is necessary to change the json data for each execution of the test for now! 
 
 describe('Invalid register test',  () => {
     before('Open main page', async () => {
