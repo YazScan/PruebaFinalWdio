@@ -10,9 +10,9 @@ class loginPage extends BasePage {
     get pageHeading() { return $('//h2[contains(text(),"Account")]');}; 
 
 /**
-   * Completa el formulario de login.
-   * @param {String} email email del usuario
-   * @param {String} password password del usuario
+   * Fills the login form
+   * @param {String} email user email 
+   * @param {String} password user password
    */
 
 async loginForm(email,password) {

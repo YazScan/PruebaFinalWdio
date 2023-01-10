@@ -4,8 +4,8 @@ export default class BasePage {
 
 
    /**
-    * Abrir página
-    * @param {String} route a la cual acceder
+    * Open web
+    * @param {String} route 
     */
    async open(route) {
        await browser.url(`${route}`);
@@ -13,8 +13,8 @@ export default class BasePage {
 
 
    /**
-    * Esperar a que un elemento sea clickeable y hacer click
-    * @param {Object} element a clickear
+    * Wait for clickable and click
+    * @param {Object} element 
     */
    async clcikElement(element) {
        await element.waitForClickable({ timeout: PAGE_TIMEOUT });
@@ -23,9 +23,9 @@ export default class BasePage {
 
 
    /**
-    * Método para enviar texto a un elemento
-    * @param {Object} element que recibirá el texto
-    * @param {String} text a envíar 
+    * Send text from an element to another 
+    * @param {Object} element receive text
+    * @param {String} text sends text
     */
    async emptyFieldAndSendText(element, text){
        await element.waitForClickable({ timeout: PAGE_TIMEOUT });
@@ -33,6 +33,4 @@ export default class BasePage {
        await element.click();
        await element.keys(text);
    }
-
-
 }

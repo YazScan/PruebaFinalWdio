@@ -3,6 +3,15 @@
         "userOne": {
             "email": "JohnS@gmail.com",
             "password": "js1234"
+        },
+        "registerData": {
+            "firstName": "Nikola",
+            "lastName": "Johnson",
+            "email": "NikJhns2010@gmail.com",
+            "telephone": "00112233",
+            "password": "1234nikola",
+            "passwordConfirm": "123nikola"
         }
     }
+
 }

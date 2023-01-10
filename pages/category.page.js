@@ -5,7 +5,7 @@ class categoryPage extends BasePage {
       //WebElements
 
       get categoryPageHeading(){ return $('h2'); };
-      get mainPageBtn (){ return $('//a[text()="Your Store"]')};	
+      get homeBtn() {return $('.fa-home')}
 
 }
 export default new categoryPage();

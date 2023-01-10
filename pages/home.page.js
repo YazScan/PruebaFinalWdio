@@ -8,11 +8,13 @@ class HomePage extends BasePage {
 
    get loginBtn(){return $('//a[text()="Login"]')};
 
+   get registerBtn() {return $('//a[text()="Register"]')};
+
    get logoutBtn() {return $('//a[text()="Logout"]')};
 
    get logguedOutMsg() {return $('//p[contains(text(),"You have been logged off your account")]')};
 
-   get pageHeading(){ return $('h1')};
+   get homePageTitle(){ return $('//h3[text()="Featured"]')};
 
    get currency(){ return $('#form-currency')};
 
