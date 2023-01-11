@@ -4,13 +4,21 @@
             "email": "JohnS@gmail.com",
             "password": "js1234"
         },
-        "registerData": {
+        "registerOne": {
             "firstName": "Nikola",
             "lastName": "Johnson",
             "email": "NikJhns2010@gmail.com",
             "telephone": "00112233",
             "password": "1234nikola",
             "passwordConfirm": "123nikola"
+        },
+        "registerTwo": {
+            "firstName": "Carol",
+            "lastName": "Jackson",
+            "email": "JacksonC2010@gmail.com",
+            "telephone": "12345678",
+            "password": "",
+            "passwordConfirm": ""
         }
     }
 
