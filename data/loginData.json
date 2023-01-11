@@ -17,8 +17,8 @@
             "lastName": "Jackson",
             "email": "JacksonC2010@gmail.com",
             "telephone": "12345678",
-            "password": "",
-            "passwordConfirm": ""
+            "password": "1234nikola",
+            "passwordConfirm": "1234NIKOLA"
         }
     }
 
