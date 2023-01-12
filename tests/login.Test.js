@@ -12,7 +12,7 @@ describe('Login test',  () => {
         await homePage.open('/');
         assert.equal(await homePage.homePageTtl.getText(),'Featured','Error:the page did not initialize well');
     });
-        it('[CP-Login-01] Should login with the credentials in loginData.json', async ()=>{
+        it(' [CP-Login-01] Should login with the credentials in loginData.json', async ()=>{
             addStep('Clicks on dropdown "My Account"');
             await homePage.myAccount.click();
             addStep('Clicks login');
