@@ -14,7 +14,7 @@ class HomePage extends BasePage {
 
    get logguedOutMsg() {return $('//p[contains(text(),"You have been logged off your account")]')};
 
-   get homePageTitle(){ return $('//h3[text()="Featured"]')};
+   get homePageTtl(){ return $('//h3[text()="Featured"]')};
 
    get currency(){ return $('#form-currency')};
 
