@@ -3,6 +3,7 @@ import BasePage from '../pages/base.page';
 class registerPage extends BasePage {
 
     //WebElements
+    get pageHeader() {return $('//h1[text()="Account"]')};
     get firstName(){ return $('#input-firstname'); };
     get lastName() { return $('#input-lastname'); };
     get email () { return $('#input-email'); };
