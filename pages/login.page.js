@@ -6,7 +6,7 @@ class loginPage extends BasePage {
     get emailForm(){ return $('#input-email'); };
     get passwordForm() { return $('#input-password'); };
     get signInBtn(){ return $('input[type="submit"]'); };
-
+    get pageHeadingLogin() {return $('//h2[text()="Returning Customer"]')};
     get pageHeading() { return $('//h2[contains(text(),"Account")]');}; 
 
 /**
@@ -16,6 +16,7 @@ class loginPage extends BasePage {
    */
 
 async loginForm(email,password) {
+    
     await this.emailForm.setValue(email);
     await this.passwordForm.setValue(password);
     await this.signInBtn.click()
