@@ -4,7 +4,7 @@ class registerPage extends BasePage {
 
     //WebElements
     get pageHeader() {return $('//h1[text()="Account"]')};
-    get firstName(){ return $('#input-firstname'); };
+    get firstNameField(){ return $('#input-firstname'); };
     get lastName() { return $('#input-lastname'); };
     get email () { return $('#input-email'); };
     get telephone() { return $('#input-telephone'); };
@@ -27,7 +27,7 @@ class registerPage extends BasePage {
    */
 
 async registerForm(firstName,lastName,email,telephone,password,passwordConfirm) {
-    await this.firstName.setValue(firstName);
+    await this.firstNameField.setValue(firstName);
     await this.lastName.setValue(lastName);
     await this.email.setValue(email);
     await this.telephone.setValue(telephone);

@@ -23,7 +23,7 @@ describe('Invalid password register test',  () => {
                 addStep('Check that is in register page')
                 assert.equal(await registerPage.pageHeader.getText(),'Account','Error: The web is not in register page');
                 addStep('Scrolls until first name field')
-                await registerPage.firstName.scrollIntoView();
+                await registerPage.firstNameField.scrollIntoView();
                 addStep('Fills the form and press continue');
                 await registerPage.registerForm(registerData.firstName,registerData.lastName,registerData.email,registerData.telephone,registerData.password,registerData.passwordConfirm);
                 addStep('Checks that the error pops out');
